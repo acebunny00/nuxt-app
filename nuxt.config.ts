@@ -6,4 +6,8 @@ export default defineNuxtConfig({
 			enabled: true,
 		},
 	},
+	modules: [
+		// ...
+		"@pinia/nuxt",
+	],
 });
