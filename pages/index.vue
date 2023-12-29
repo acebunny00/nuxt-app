@@ -9,4 +9,5 @@
 		<a href="https://nuxt.com/docs/getting-started/routing" target="_blank">Learn more about Nuxt Routing</a>
 	</div>
 	<hr />
+	<h1 class="animate__animated animate__bounce">An animated element</h1>
 </template>
