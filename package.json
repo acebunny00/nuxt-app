@@ -1,17 +1,26 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "nuxt": "^3.9.0",
-    "vue": "^3.3.13",
-    "vue-router": "^4.2.5"
-  }
+	"name": "nuxt-app",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev open .env": "npx nuxi dev --o",
+		"dev open .env.example": "npx nuxi dev --o --dotenv .env.example",
+		"cleanup": "npx nuxi cleanup",
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare",
+		"prisma generate": "prisma generate",
+		"prisma studio": "prisma studio",
+		"prisma db pull": "prisma db pull",
+		"cleanup and node_modules": "npx nuxi cleanup && rd /s /q node_modules",
+		"dev --https": "npx nuxt dev --https",
+		"dev --https --host": "npx nuxt dev --https --host"
+	},
+	"devDependencies": {
+		"nuxt": "^3.9.0",
+		"vue": "^3.3.13",
+		"vue-router": "^4.2.5"
+	}
 }
