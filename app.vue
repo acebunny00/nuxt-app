@@ -1,9 +1,11 @@
 <script setup lang="ts">
 	const route = useRoute();
+	const title = ref("Nuxt app");
+	const description = ref("My amazing site.");
 
 	useSeoMeta({
-		title: "[title]",
-		description: "[description]",
+		title,
+		description,
 		ogTitle: "[og:title]",
 		ogDescription: "[og:description]",
 		ogImage: "[og:image]",
@@ -15,16 +17,20 @@
 	});
 
 	useHead({
+		meta: [{ charset: "utf-8" }],
 		htmlAttrs: {
-			lang: "en",
+			lang: "ko",
 		},
 		link: [
 			{
 				rel: "icon",
-				type: "image/png",
-				href: "/favicon.png",
+				type: "image/x-icon",
+				href: "/favicon.ico",
 			},
 		],
+		bodyAttrs: {
+			class: "test",
+		},
 	});
 </script>
 
