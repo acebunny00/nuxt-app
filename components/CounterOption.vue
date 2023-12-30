@@ -34,6 +34,11 @@
 	setTimeout(() => {
 		counter.$reset();
 	}, 2000);
+
+	const userList = useUserListStore();
+	const { getUserById } = storeToRefs(userList);
+	// <script setup> 내에서 함수에 액세스하려면
+	// `getUserById.value`를 사용해야 합니다.
 </script>
 
 <template>
@@ -43,5 +48,7 @@
 	<div>counter.count: {{ counter.count }}</div>
 	<div>counter.doubleCount: {{ counter.doubleCount }}</div>
 	<div>doubleValue: {{ doubleValue }}</div>
+	<p>Double count is {{ counter.doublePlusOne }}</p>
+	<p>User2: {{ getUserById(2) }}</p>
 	<hr />
 </template>
