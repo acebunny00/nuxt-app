@@ -19,6 +19,7 @@
 		"dev --https --host": "npx nuxt dev --https --host"
 	},
 	"devDependencies": {
+		"@pinia-plugin-persistedstate/nuxt": "^1.2.0",
 		"nuxt": "^3.9.0",
 		"vue": "^3.3.13",
 		"vue-gtag-next": "^1.14.0",
