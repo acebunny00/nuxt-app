@@ -1,16 +1,17 @@
 <template>
 	<h2>VueUse</h2>
-	<div>pos: {{ x }}, {{ y }}</div>
 	<div>isDark: {{ isDark }}</div>
 	<div>store: {{ store }}</div>
 
 	<div ref="el">Click Outside of Me</div>
+	<UseMouse v-slot="{ x, y }"> x: {{ x }} y: {{ y }} </UseMouse>
+	<UseDark v-slot="{ isDark, toggleDark }">
+		<button @click="toggleDark()">Is Dark: {{ isDark }}</button>
+	</UseDark>
 </template>
 
 <script lang="ts" setup>
-	// tracks mouse position
-	const { x, y } = useMouse();
-
+	import { OnClickOutside, UseMouse, UseDark } from "@vueuse/components";
 	// is user prefers dark theme
 	const isDark = usePreferredDark();
 
