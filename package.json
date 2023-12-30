@@ -21,6 +21,7 @@
 	"devDependencies": {
 		"nuxt": "^3.9.0",
 		"vue": "^3.3.13",
+		"vue-gtag-next": "^1.14.0",
 		"vue-router": "^4.2.5"
 	},
 	"dependencies": {
