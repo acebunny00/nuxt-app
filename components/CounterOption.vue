@@ -39,6 +39,14 @@
 	const { getUserById } = storeToRefs(userList);
 	// <script setup> 내에서 함수에 액세스하려면
 	// `getUserById.value`를 사용해야 합니다.
+
+	// 스토어의 액션을 메서드처럼 호출
+	counter.randomizeCounter();
+
+	// const someStore = useSomeStore();
+
+	// // 이 구독은 컴포넌트가 마운트 해제된 후에도 유지됨.
+	// someStore.$onAction(callback, true);
 </script>
 
 <template>
@@ -50,5 +58,7 @@
 	<div>doubleValue: {{ doubleValue }}</div>
 	<p>Double count is {{ counter.doublePlusOne }}</p>
 	<p>User2: {{ getUserById(2) }}</p>
+	<!-- 템플릿에서 -->
+	<button @click="counter.randomizeCounter()">랜덤</button>
 	<hr />
 </template>

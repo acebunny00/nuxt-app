@@ -28,5 +28,12 @@ export const useCounterOptionStore = defineStore("counterOption", {
 		increment() {
 			this.count++;
 		},
+		randomizeCounter() {
+			this.count = Math.round(100 * Math.random());
+		},
+		incrementAndPrint() {
+			this.increment();
+			console.log("숫자 세기:", this.count);
+		},
 	},
 });
